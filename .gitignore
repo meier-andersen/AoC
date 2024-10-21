@@ -1,3 +1,7 @@
 node_modules/
 
 package-lock.json
+
+# Ignore all real data sets
+**/real.txt
+!src/code/template/x/input/real.txt
