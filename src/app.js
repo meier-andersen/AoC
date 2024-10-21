@@ -11,6 +11,8 @@ import { run } from "./utility/taskHandler.js"
 //await run(2022, 4, 2, 4, 897);
 //await run(2022, 5, 1, "CMZ", "TPGVQPFDH");
 //await run(2022, 5, 2, "MCD", "DMRDFRHHH");
+//await run(2022, 6, 1, 11, 1766);
+//await run(2022, 6, 2, 29, 2383);
 
 //2023
 //await run(2023, 1, 1, 142, 53651);
