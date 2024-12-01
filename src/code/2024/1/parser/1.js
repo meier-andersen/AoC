@@ -5,7 +5,6 @@ export const parse = (input) => {
     }
     input.forEach(element => {
         let nums = element.split("   ");
-
         data.l1.push(parseInt(nums[0]));
         data.l2.push(parseInt(nums[1]));
     })

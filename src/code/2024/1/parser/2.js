@@ -5,18 +5,16 @@ export const parse = (input) => {
     }
     input.forEach(element => {
         let nums = element.split("   ");
-        const n1 = parseInt(nums[0]);
-        const n2 = parseInt(nums[1]);
 
-        data.l1.push(n1)
+        data.l1.push(parseInt(nums[0]))
 
-        const match2 = data.l2.find(x => x.id === n2)
+        const match2 = data.l2.find(x => x.id === parseInt(nums[1]))
         if(match2) {
             match2.num++;
         }
         else {
-            data.l2.push({id: n2, num: 1})
+            data.l2.push({id: parseInt(nums[1]), num: 1})
         }
-    })
+    });
     return data;
 }
