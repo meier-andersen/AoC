@@ -33,6 +33,9 @@ export const run = async (year, day, part, expected, actual = null) => {
                             console.log(`✅ Passed Real - Recieved ${resReal}`);
                         }
                     }
+                    else {
+                        console.log(`Result: ${resReal}`);
+                    }
                 }
             }
             catch (e) {
