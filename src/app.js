@@ -24,5 +24,7 @@ import { run } from "./utility/taskHandler.js"
 //2024
 // await run(2024, 1, 1, 11, 1151792);
 // await run(2024, 1, 2, 31, 21790168);
-await run(2024, 2, 1, 2, 379);
-await run(2024, 2, 2, 4, 430);
+// await run(2024, 2, 1, 2, 379);
+// await run(2024, 2, 2, 4, 430);
+//await run(2024, 3, 1, 161, 166905464);
+await run(2024, 3, 2, 48, 72948684);
