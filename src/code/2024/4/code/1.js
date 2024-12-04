@@ -1,32 +1,18 @@
+const directions = [-1, 0, 1];
+
 export const run = (input) => {
   let res = 0;
   for (let row = 0; row < input.length; row++) {
     for (let col = 0; col < input[row].length; col++) {
       if (input[row][col] === "X") {
-        if (testLocation(input, row, col, 0, 1, ["M", "A", "S"]))
-          //Vertical
-          res++;
-        if (testLocation(input, row, col, 0, -1, ["M", "A", "S"]))
-          //Vertical backwards
-          res++;
-        if (testLocation(input, row, col, 1, 0, ["M", "A", "S"]))
-          //Horizontal
-          res++;
-        if (testLocation(input, row, col, -1, 0, ["M", "A", "S"]))
-          //Horizontal backwards
-          res++;
-        if (testLocation(input, row, col, 1, -1, ["M", "A", "S"]))
-          //Down left
-          res++;
-        if (testLocation(input, row, col, 1, 1, ["M", "A", "S"]))
-          //Down right
-          res++;
-        if (testLocation(input, row, col, -1, -1, ["M", "A", "S"]))
-          //Up left
-          res++;
-        if (testLocation(input, row, col, -1, 1, ["M", "A", "S"]))
-          //Up right
-          res++;
+        for (let dx of directions) {
+          for (let dy of directions) {
+            if (dx === 0 && dy === 0) continue; // Skip the no-movement case
+            if (testLocation(input, row, col, dx, dy, ["M", "A", "S"])) {
+              res++;
+            }
+          }
+        }
       }
     }
   }
