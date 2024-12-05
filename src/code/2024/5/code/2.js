@@ -37,10 +37,8 @@ export const run = (input) => {
         }
       }
     }
-  });
-
-  newList.forEach((page) => {
     res += page[Math.floor(page.length / 2)];
   });
+  
   return res;
 };
