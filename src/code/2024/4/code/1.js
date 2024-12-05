@@ -8,9 +8,7 @@ export const run = (input) => {
         for (let dx of directions) {
           for (let dy of directions) {
             if (dx === 0 && dy === 0) continue; // Skip the no-movement case
-            if (testLocation(input, row, col, dx, dy, ["M", "A", "S"])) {
-              res++;
-            }
+            res += testLocation(input, row, col, dx, dy, ["M", "A", "S"]);
           }
         }
       }
@@ -28,13 +26,13 @@ const testLocation = (input, row, col, offsetRow, offsetCol, letters) => {
     newRow >= input.length ||
     newCol >= input[row].length
   )
-    return false;
+    return 0;
 
   if (input[newRow][newCol] !== letters[0]) {
-    return false;
+    return 0;
   }
 
-  if (letters[0] === "S") return true;
+  if (letters[0] === "S") return 1;
 
   letters.shift();
   return testLocation(input, newRow, newCol, offsetRow, offsetCol, letters);
