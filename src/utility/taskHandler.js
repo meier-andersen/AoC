@@ -14,29 +14,31 @@ export const run = async (year, day, part, expected, actual = null) => {
     return import(codePath).then(code => {
         return import(parserPath).then(parser => {
             try {
-                const start = performance.now();
+                const start = Date.now();
                 const parsedTestData = parser.parse(dataTest);
                 const resTest = code.run(parsedTestData); 
-                const end = performance.now(); 
+                const end = Date.now();
 
                 if(resTest !== expected) 
                     console.log(`❌ Failed Test - Expected ${expected} but recieved ${resTest}`);
                 else {
-                    console.log(`✅ Passed Test - Recieved ${resTest}, executing on real data - ${Math.round(end - start)}ms`);
-
+                    console.log(`✅ Passed Test - Recieved ${resTest}, executing on real data - ${Math.abs(end - start)}ms`);
+                    
+                    const startReal = Date.now();
                     const parsedRealData = parser.parse(dataReal);
-                    const resReal = code.run(parsedRealData);  
+                    const resReal = code.run(parsedRealData);
+                    const endReal = Date.now();  
 
                     if(actual) {
                         if(resReal != actual) {
-                            console.log(`❌ Failed Real - Expected ${actual} but recieved ${resReal}`);
+                            console.log(`❌ Failed Real - Expected ${actual} but recieved ${resReal} - ${Math.abs(endReal - startReal)}ms`);
                         }
                         else {
-                            console.log(`✅ Passed Real - Recieved ${resReal} - ${Math.round(end - start)}ms`);
+                            console.log(`✅ Passed Real - Recieved ${resReal} - ${Math.abs(endReal - startReal)}ms`);
                         }
                     }
                     else {
-                        console.log(`Result: ${resReal}`);
+                        console.log(`Result: ${resReal} - ${Math.abs(endReal - startReal)}ms`);
                     }
                 }
             }
