@@ -1,3 +1,4 @@
-export const run = input => {
-    return -1;
-}
+export const run = (input) => {
+  console.log(input);
+  return -1;
+};

@@ -1,3 +1,3 @@
-export const run = input => {
-    return -1;
-}
+export const run = (input) => {
+  return -1;
+};
