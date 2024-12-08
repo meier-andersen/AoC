@@ -1,7 +1,7 @@
 export const parse = (input) => {
-  let data = [];
+  const data = [];
   input.forEach((element) => {
-    data = element.split("");
+    data.push(element.split("x").map((x) => parseInt(x)));
   });
   return data;
 };
