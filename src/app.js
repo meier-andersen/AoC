@@ -1,5 +1,9 @@
 import { run } from "./utility/taskHandler.js"
 
+//2015
+await run(2015, 1, 1, 3, 280);
+await run(2015, 1, 2, 5, 1797);
+
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
 // await run(2020, 14, 2, 208);
@@ -36,5 +40,5 @@ import { run } from "./utility/taskHandler.js"
 // await run(2024, 6, 2, 6, 1770);
 // await run(2024, 7, 1, 3749, 1708857123053);
 // await run(2024, 7, 2, 11387, 189207836795655);
-await run(2024, 8, 1, 14, 426);
-await run(2024, 8, 2, 34, 1359);
+// await run(2024, 8, 1, 14, 426);
+// await run(2024, 8, 2, 34, 1359);

@@ -11,6 +11,7 @@ Current stats:
 - [2020] 27*.
 - [2019]  3*.
 - [2018]  2*.
+- [2015]  2*.
 
 
 To run the program on existing puzzles:
