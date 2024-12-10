@@ -6,6 +6,7 @@ export const run = async (year, day, part, expected, actual = null) => {
   const codePath = `../code/${year}/${day}/code/${part}.js`;
   const parserPath = `../code/${year}/${day}/parser/${part}.js`;
 
+  console.log("");
   console.log(`--- Running year: ${year} day: ${day} part: ${part} ---`);
 
   const dataTest = await readFileAndReturnArray(dataPathTest);
