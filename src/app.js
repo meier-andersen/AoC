@@ -20,7 +20,9 @@ import { run } from "./utility/taskHandler.js"
 // await run(2015, 9, 1, 605, 207);
 // await run(2015, 9, 2, 982, 804);
 // await run(2015, 10, 1, 82350, 492982);
-await run(2015, 10, 2, 1166642, 6989950);
+// await run(2015, 10, 2, 1166642, 6989950);
+// await run(2015, 11, 1, "ghjaabcc", "hepxxyzz");
+await run(2015, 11, 2, "heqaabcc", "heqaabcc");
 
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
