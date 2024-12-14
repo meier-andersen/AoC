@@ -12,7 +12,6 @@ const calcRes = (robots, rows, cols) => {
   const tr = robots.filter((x) => x.r < midR && x.c > midC).length;
   const bl = robots.filter((x) => x.r > midR && x.c < midC).length;
   const br = robots.filter((x) => x.r > midR && x.c > midC).length;
-  console.log(`${tl}, ${tr}, ${bl}, ${br}`);
   return tl * tr * bl * br;
 };
 
