@@ -9,21 +9,21 @@ export const run = (input) => {
 const tryMove = (map, opr) => {
   switch (opr) {
     case "<":
-      moveRecursive(map, 0, -1);
+      moveGeneric(map, 0, -1);
       break;
     case ">":
-      moveRecursive(map, 0, 1);
+      moveGeneric(map, 0, 1);
       break;
     case "^":
-      moveRecursive(map, -1, 0);
+      moveGeneric(map, -1, 0);
       break;
     case "v":
-      moveRecursive(map, 1, 0);
+      moveGeneric(map, 1, 0);
       break;
   }
 };
 
-const moveRecursive = (map, offR, offC) => {
+const moveGeneric = (map, offR, offC) => {
   const pos = findRobot(map);
   if (canMove(map, pos.r + offR, pos.c + offC, offR, offC)) {
     map[pos.r][pos.c] = ".";
@@ -34,15 +34,12 @@ const moveRecursive = (map, offR, offC) => {
 const canMove = (map, r, c, rowOff, colOff) => {
   const newPos = map[r][c];
   if (newPos === "#") return false;
-  else if (newPos === ".") {
+  if (newPos === ".") return true;
+  if (canMove(map, r + rowOff, c + colOff, rowOff, colOff)) {
+    map[r + rowOff][c + colOff] = "O";
     return true;
-  } else if (newPos === "O") {
-    if (canMove(map, r + rowOff, c + colOff, rowOff, colOff)) {
-      map[r + rowOff][c + colOff] = "O";
-      return true;
-    }
-    return false;
   }
+  return false;
 };
 
 const findRobot = (map) => {
@@ -60,7 +57,6 @@ const calcRes = (map) => {
       if (curr === "O") res += r * 100 + c;
     }
   }
-
   return res;
 };
 
