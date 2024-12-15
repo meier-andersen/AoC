@@ -1,10 +1,31 @@
+import readline from 'readline';
+
+const playAsAnimation = false;
 export const run = (input) => {
+  if(playAsAnimation) 
+    process.stdout.write('\x1b[?25l');
   const map = input.map;
   input.opr.forEach((opr) => {
     tryMove(map, opr);
+
+    if(playAsAnimation) {
+      readline.cursorTo(process.stdout, 0, 0);
+      readline.clearScreenDown(process.stdout);
+      printMap(map);
+      syncDelay(25);
+    }
   });
+
+  process.stdout.write('\x1b[?25h');
   return calcRes(map);
 };
+
+function syncDelay(ms) {
+  const start = Date.now();
+  while (Date.now() - start < ms) {
+      // Do nothing
+  }
+}
 
 const tryMove = (map, opr) => {
   switch (opr) {
