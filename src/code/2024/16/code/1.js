@@ -19,8 +19,9 @@ const findSolutions = (map) => {
     
 
     const visitedKey = `${curr.loc}-${curr.dir}`;
-    if (visited.find((x) => x.id === visitedKey)) continue;
-    visited.push({ id: visitedKey });
+    const hasVisitedScore = visited.get(visitedKey);
+    if (hasVisitedScore) continue;
+      visited.set(visitedKey, true);
 
     const node = nodes.find((x) => x.id === curr.loc);
 
@@ -171,7 +172,7 @@ function canMove(map, r, c, dir, direction) {
 
 const reset = () => {
   nodes = [];
-  visited = [];
+  visited = new Map();
 };
 
 const findGoal = (map) => {

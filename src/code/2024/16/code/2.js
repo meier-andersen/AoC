@@ -28,8 +28,9 @@ const findSolutions = (map) => {
     }
 
     const visitedKey = `${curr.loc}-${curr.dir}`;
-    if (visited.find((x) => x.id === visitedKey && x.score < curr.score)) continue;
-    visited.push({ id: visitedKey, score: curr.score });
+    const hasVisitedScore = visited.get(visitedKey);
+    if (hasVisitedScore && hasVisitedScore < curr.score) continue;
+      visited.set(visitedKey, curr.score);
 
     const node = nodes.find((x) => x.id === curr.loc);
 
@@ -46,7 +47,7 @@ const findSolutions = (map) => {
   return solutions;
 };
 
-let visited = [];
+let visited;
 let nodes = [];
 let goal = null;
 const generateNodes = (map) => {
@@ -216,7 +217,7 @@ const printMap = (map, visited = []) => {
 
 const reset = () => {
   nodes = [];
-  visited = [];
+  visited = new Map();
 };
 
 const findGoal = (map) => {
