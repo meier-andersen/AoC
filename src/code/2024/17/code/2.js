@@ -1,31 +1,23 @@
 let rA, rB, rC, p, oprs;
 export const run = (input) => {
-  const goal = input.opr.join(",");
-  let a = 0;
-  while(true) {
-
-    if(a % 1000000 === 0) 
-      console.log(a);
-    const res = tryValues(input.opr, a);
-    if(res === goal)
-      return a;
-    a++;
-
-    return
+  let res = 0;
+  for (let len = input.opr.length - 1; len >= 0; len--) {
+    res *= 8;
+    const currTarget = input.opr.slice(len).join(",");
+    while (true) {
+      const curr = tryValues(input.opr, res);
+      if (curr === currTarget) break;
+      res++;
+    }
   }
+  return res;
 };
 
 const tryValues = (opr, a) => {
   let res = [];
   reset(opr, a);
 
-  let i = 0;
   while (true) {
-    i++;
-    if(i > 200) {
-      console.log("became too long")
-      return -1;
-    }
     const opcode = oprs[p];
     const opand = oprs[p + 1];
 
@@ -60,7 +52,7 @@ const tryValues = (opr, a) => {
 
     if (opcode !== 3 || rA === 0) p += 2;
   }
-}
+};
 
 const handleAdv = (opand) => {
   rA = Math.trunc(rA / dv(opand));
