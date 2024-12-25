@@ -93,5 +93,8 @@ import { run } from "./utility/taskHandler.js";
 // await run(2024, 21, 2, 154115708116294, 191139369248202)
 // await run(2024, 22, 1, 37327623, 18261820068);
 // await run(2024, 22, 2, 23, 2044);
-await run(2024, 23, 1, 7, 1108);
-await run(2024, 23, 2, "co,de,ka,ta", "ab,cp,ep,fj,fl,ij,in,ng,pl,qr,rx,va,vf");
+// await run(2024, 23, 1, 7, 1108);
+// await run(2024, 23, 2, "co,de,ka,ta", "ab,cp,ep,fj,fl,ij,in,ng,pl,qr,rx,va,vf");
+// await run(2024, 24, 1, 2024, 58367545758258);
+// await run(2024, 24, 2, "z00,z01,z02,z05");
+await run(2024, 25, 1, 3, 3196);
