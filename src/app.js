@@ -26,6 +26,8 @@ import { run } from "./utility/taskHandler.js";
 // await run(2015, 12, 1, 3, 191164);
 // await run(2015, 12, 2, 6, 87842);
 // await run(2015, 13, 1, 330);
+// await run(2015, 14, 1, 2660, 2660);
+// await run(2015, 14, 2, 1564, 1256);
 
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
@@ -96,5 +98,5 @@ import { run } from "./utility/taskHandler.js";
 // await run(2024, 23, 1, 7, 1108);
 // await run(2024, 23, 2, "co,de,ka,ta", "ab,cp,ep,fj,fl,ij,in,ng,pl,qr,rx,va,vf");
 // await run(2024, 24, 1, 2024, 58367545758258);
-await run(2024, 24, 2, "bpf,fdw,hcc,hqc,qcw,z05,z11,z35", "bpf,fdw,hcc,hqc,qcw,z05,z11,z35");
+// await run(2024, 24, 2, "bpf,fdw,hcc,hqc,qcw,z05,z11,z35", "bpf,fdw,hcc,hqc,qcw,z05,z11,z35");
 // await run(2024, 25, 1, 3, 3196);
