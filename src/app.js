@@ -36,6 +36,8 @@ import { run } from "./utility/taskHandler.js";
 // await run(2015, 17, 2, 3, 4);
 // await run(2015, 18, 1, 4, 814);
 // await run(2015, 18, 2, 17, 924);
+// await run(2015, 19, 1, 7, 576);
+ await run(2015, 19, 2, 6, 207);
 
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
