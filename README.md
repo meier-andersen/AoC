@@ -29,5 +29,5 @@ How to add new puzzles:
 - In the path: {year}/{day}/input. Add the test data in 1-test.txt (and 2-test.txt when you get to part two)
 - In the path: {year}/{day}/input. Add your real puzzle data to real.txt
 - In the path: {year}/{day}/parser. Add the logic for converting the input to something usefull
-- In the paht: {year}/{day}/code. Add the code for part 1 in 1.js (and 2.js for part two). Make sure that the expected result is returned.
+- In the path: {year}/{day}/code. Add the code for part 1 in 1.js (and 2.js for part two). Make sure that the expected result is returned.
 If the code returns the correct value for the test data, the same code is automatically executed on the real dataset 
