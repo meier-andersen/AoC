@@ -25,7 +25,8 @@ import { run } from "./utility/taskHandler.js";
 // await run(2015, 11, 2, "heqaabcc", "heqaabcc");
 // await run(2015, 12, 1, 3, 191164);
 // await run(2015, 12, 2, 6, 87842);
-// await run(2015, 13, 1, 330);
+// await run(2015, 13, 1, 330, 618);
+ await run(2015, 13, 2, 286, 601);
 // await run(2015, 14, 1, 2660, 2660);
 // await run(2015, 14, 2, 1564, 1256);
 // await run(2015, 15, 1, 62842880, 222870);
@@ -48,7 +49,7 @@ import { run } from "./utility/taskHandler.js";
 // await run(2015, 23, 2, 0, 231);
 // await run(2015, 24, 1, 99, 10439961859);
 //await run(2015, 24, 2, 44, 72050269);
-await run(2015, 25, 1, 27995004, 2650453);
+// await run(2015, 25, 1, 27995004, 2650453);
 
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
