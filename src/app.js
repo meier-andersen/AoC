@@ -66,8 +66,10 @@ import { run } from "./utility/taskHandler.js";
 // await run(2016, 6, 2, "advent", "lsoypmia");
 // await run(2016, 7, 1, 2, 115);
 // await run(2016, 7, 2, 3, 231);
-await run(2016, 8, 1, 6, 106);
+// await run(2016, 8, 1, 6, 106);
 // await run(2016, 8, 2, -1, -1);
+// await run(2016, 9, 1, 18, 123908);
+await run(2016, 9, 2, 445, 10755693147);
 
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
