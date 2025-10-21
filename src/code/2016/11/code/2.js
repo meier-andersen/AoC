@@ -85,7 +85,6 @@ const moveUp = curr => {
     }
   }
 
-
   for (const candidate of candidates) {
     const obj = doStep(curr, candidate, curr.elevator+1);
     if(obj)
