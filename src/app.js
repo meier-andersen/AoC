@@ -87,7 +87,9 @@ import { run } from "./utility/taskHandler.js";
 // await run(2016, 17, 1, "DRURDRUDDLLDLUURRDULRLDUUDDDRR", "DDRRUDLRRD");
 // await run(2016, 17, 2, 830, 488);
 // await run(2016, 18, 1, 38, 2016);
-await run(2016, 18, 2, 38, 19998750);
+// await run(2016, 18, 2, 38, 19998750);
+// await run(2016, 19, 1, 3, 1830117);
+await run(2016, 19, 2, 2, 1417887);
 
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
