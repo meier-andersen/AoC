@@ -12,10 +12,10 @@ Current stats:
 - [2019]  3*.
 - [2018]  2*.
 - [2017]  0*.
-- [2016] 38*.
+- [2016] 42*.
 - [2015] 50*.
 
-Total stars: 320*
+Total stars: 324*
 
 To run the program on existing puzzles:
 - In src/app.js, specify which puzzle to run.
