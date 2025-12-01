@@ -93,7 +93,9 @@ import { run } from "./utility/taskHandler.js";
 // await run(2016, 20, 1, 3, 22887907);
 // await run(2016, 20, 2, 2, 109);
 // await run(2016, 21, 1, "decab", "bfheacgd");
-await run(2016, 21, 2, "abcde", "gcehdbfa");
+// await run(2016, 21, 2, "abcde", "gcehdbfa");
+// await run(2016, 22, 1, -1, 901);
+// await run(2016, 22, 2, 7);
 
 //2020
 // await run(2020, 14, 1, 165, 10452688630537);
@@ -166,3 +168,8 @@ await run(2016, 21, 2, "abcde", "gcehdbfa");
 // await run(2024, 24, 1, 2024, 58367545758258);
 // await run(2024, 24, 2, "bpf,fdw,hcc,hqc,qcw,z05,z11,z35", "bpf,fdw,hcc,hqc,qcw,z05,z11,z35");
 // await run(2024, 25, 1, 3, 3196);
+
+
+// 2025 
+// await run(2025, 1, 1, 3, 980);
+await run(2025, 1, 2, 6, 5961);
