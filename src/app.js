@@ -185,3 +185,5 @@ import { run } from "./utility/taskHandler.js";
 // await run(2025, 6, 2, 3263827, 7329921182115);
 // await run(2025, 7, 1, 21, 1681);
 // await run(2025, 7, 2, 40, 422102272495018);
+// await run(2025, 8, 1, 40, 54180);
+await run(2025, 8, 2, 25272, 25325968);
