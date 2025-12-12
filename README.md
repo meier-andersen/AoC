@@ -4,7 +4,7 @@ Unfortuantly all my code has been lost, so for 2024 I have to start over.
 The project will be setup so new years and days can be added dynamically. 
 
 Current stats:
-- [2025] 16* / 24* (AoC++).
+- [2025] 24* / 24* (AoC++).
 - [2024] 50* / 50* (AoC++).
 - [2023] 50* / 50* (AoC++).
 - [2022] 50* / 50*.
@@ -16,7 +16,7 @@ Current stats:
 - [2016] 44* / 50*.
 - [2015] 50* / 50*.
 
-Total stars: 342*
+Total stars: 350*
 
 To run the program on existing puzzles:
 - In src/app.js, specify which puzzle to run.
